@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Registration Form</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <section class="reg-card">
+            <div class="reg-card__container">
+                <h2 class="reg-card__heading">Registration</h2>
+                <form
+                    class="reg__form"
+                    id="registrationForm"
+                    aria-labelledby="formTitle"
+                    novalidate
+                >
+                    <div class="reg__form-row">
+                        <div class="reg__form-group">
+                            <label class="reg__form-label" for="fullname">
+                                Full Name <span aria-hidden="true">*</span>
+                            </label>
+                            <input
+                                type="text"
+                                id="fullname"
+                                name="fullname"
+                                class="reg__form-input"
+                                aria-required="true"
+                                placeholder="Enter your name"
+                                required
+                            />
+                            <small
+                                class="error-message"
+                                aria-live="polite"
+                            ></small>
+                        </div>
+
+                        <div class="reg__form-group">
+                            <label class="reg__form-label" for="fullname">
+                                Username <span aria-hidden="true">*</span>
+                            </label>
+                            <input
+                                class="reg__form-input"
+                                type="text"
+                                id="username"
+                                name="username"
+                                placeholder="Enter your username"
+                                required
+                                minlength="5"
+                            />
+                            <small
+                                class="error-message"
+                                aria-live="polite"
+                            ></small>
+                        </div>
+                    </div>
+
+                    <div class="reg__form-row">
+                        <div class="reg__form-group">
+                            <label class="reg__form-label" for="email">
+                                Email <span aria-hidden="true">*</span>
+                            </label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                aria-required="true"
+                                class="reg__form-input"
+                                placeholder="Enter your email"
+                                required
+                            />
+                            <small
+                                class="error-message"
+                                aria-live="polite"
+                            ></small>
+                        </div>
+
+                        <div class="reg__form-group">
+                            <label class="reg__form-label" for="phoneNumber">
+                                Phone Number <span aria-hidden="true">*</span>
+                            </label>
+                            <input
+                                type="tel"
+                                id="phoneNumber"
+                                name="phoneNumber"
+                                class="reg__form-input"
+                                placeholder="Enter your number"
+                                pattern="[0-10]{11}"
+                                required
+                                aria-describedby="phoneHelp"
+                            />
+                            <!-- <small id="phoneHelp">Format: 10 digits</small> -->
+                            <small
+                                class="error-message"
+                                aria-live="polite"
+                            ></small>
+                        </div>
+                    </div>
+
+                    <div class="reg__form-row">
+                        <div class="reg__form-group">
+                            <label class="reg__form-label" for="password">
+                                Password <span aria-hidden="true">*</span>
+                            </label>
+                            <input
+                                type="password"
+                                id="password"
+                                name="password"
+                                class="reg__form-input"
+                                aria-required="true"
+                                placeholder="Enter your password"
+                                required
+                                minlength="6"
+                            />
+                            <small
+                                class="error-message"
+                                aria-live="polite"
+                            ></small>
+                        </div>
+
+                        <div class="reg__form-group">
+                            <label
+                                class="reg__form-label"
+                                for="confirmPassword"
+                            >
+                                Confirm Password
+                                <span aria-hidden="true">*</span>
+                            </label>
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                name="confirmPassword"
+                                class="reg__form-input"
+                                placeholder="Enter your number"
+                                aria-required="true"
+                                required
+                                minlength="6"
+                            />
+                            <small
+                                class="error-message"
+                                aria-live="polite"
+                            ></small>
+                        </div>
+                    </div>
+
+                    <div class="reg__form-group">
+                        <label>Gender <span aria-hidden="true">*</span></label>
+                        <div
+                            class="gender-options"
+                            role="radiogroup"
+                            aria-required="true"
+                        >
+                            <label class="gender-option" for="male">
+                                <input
+                                    id="male"
+                                    type="radio"
+                                    name="gender"
+                                    value="male"
+                                    required
+                                />
+                                Male
+                            </label>
+                            <label class="gender-option" for="female">
+                                <input
+                                    id="female"
+                                    type="radio"
+                                    name="gender"
+                                    value="female"
+                                    required
+                                />
+                                Female
+                            </label>
+                            <label class="gender-option" for="other">
+                                <input
+                                    id="other"
+                                    type="radio"
+                                    name="gender"
+                                    value="other"
+                                    required
+                                />
+                                Other
+                            </label>
+                        </div>
+                        <small class="error-message" aria-live="polite"></small>
+                    </div>
+
+                    <div class="reg__form-actions">
+                        <button type="button" class="btn reg__cencel-btn">
+                            Cancel
+                        </button>
+                        <button type="submit" class="btn reg__submit-btn">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </body>
+</html>
