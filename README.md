@@ -4,14 +4,12 @@ To create documentation for your GitHub repository regarding the **Registration 
 
 ---
 
-[![Sushiman](./sushiman.png "a title")](https://sushiman-responsive-website.netlify.app/)
-
 # Table of Contents
 
 1. ⬇️ [Installation](#installation)
 2. 📂 [Folder Structure](#folder-structure)
 3. 📄 [registration_card](#registration-card)
-4. 📊 [Student Results Calculator](#student-result-calculator)
+4. 📊 [Student Results Calculator](#student-result-calculator)`
 5. 🐘 [Features](#features)
 6. 🤝 [Connect With me](#contact)
 7. 📜 [License](#License)
