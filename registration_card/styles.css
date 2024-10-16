@@ -41,6 +41,7 @@
     --text-black: var(--black);
     --text-white: var(--white);
     --text-gray-500: var(--gray-500);
+    --text-accent-color-500: var(--coral-red-500);
 
     /* border color */
     --border-slate-blue-400: var(--slate-blue-400);
@@ -107,7 +108,7 @@ body {
 .reg__form-row {
     gap: 1.6rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 1rem;
 }
 
@@ -149,16 +150,26 @@ body {
     box-shadow: var(--shadow-200);
 }
 
-/* .reg__form-input:invalid {
+.reg__form-input.invalid:invalid {
     border-color: var(--bg-accent-color-500);
     box-shadow: 0 0 5px rgba(255, 94, 87, 0.5);
-} */
+}
+
+.error-message {
+    color: var(--text-accent-color-500);
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: inherit;
+}
+
+.reg__form-gender-wrap {
+    margin-bottom: 2.4rem;
+}
 
 .gender-options {
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-bottom: 2.4rem;
 }
 
 .gender-option {
@@ -202,6 +213,10 @@ body {
     border-color: var(--border-slate-blue-400);
     outline: none;
     box-shadow: var(--shadow-200);
+}
+
+.gender-option > input[type="radio"].invalid:invalid {
+    border-color: var(--bg-accent-color-500);
 }
 
 .reg__form-actions {

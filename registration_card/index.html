@@ -11,6 +11,7 @@
             rel="stylesheet"
         />
         <link rel="stylesheet" href="styles.css" />
+        <script src="script.js" async></script>
     </head>
     <body>
         <section class="reg-card">
@@ -150,7 +151,7 @@
                         </div>
                     </div>
 
-                    <div class="reg__form-group">
+                    <div class="reg__form-group reg__form-gender-wrap">
                         <label>Gender <span aria-hidden="true">*</span></label>
                         <div
                             class="gender-options"
@@ -163,6 +164,7 @@
                                     type="radio"
                                     name="gender"
                                     value="male"
+                                    class="reg__form-gender"
                                     required
                                 />
                                 Male
@@ -173,6 +175,7 @@
                                     type="radio"
                                     name="gender"
                                     value="female"
+                                    class="reg__form-gender"
                                     required
                                 />
                                 Female
@@ -183,6 +186,7 @@
                                     type="radio"
                                     name="gender"
                                     value="other"
+                                    class="reg__form-gender"
                                     required
                                 />
                                 Other
@@ -192,7 +196,7 @@
                     </div>
 
                     <div class="reg__form-actions">
-                        <button type="button" class="btn reg__cencel-btn">
+                        <button type="reset" class="btn reg__cencel-btn">
                             Cancel
                         </button>
                         <button type="submit" class="btn reg__submit-btn">
