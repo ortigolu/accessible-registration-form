@@ -31,6 +31,14 @@ function handleSubmit(e) {
         const data = Object.fromEntries(formData.entries());
         console.log("Success", data);
         // Do something with this data;
+
+        // fetch('https://example.com/api/register', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json'
+        //     },
+        //     body: JSON.stringify(formObject)
+        // })
     }
 }
 
