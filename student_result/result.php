@@ -60,7 +60,11 @@ function calculateGrade($mark) {
 
 //Function to calculate total marks
 function calculateTotalMarks($marks) {
-    return array_sum($marks);
+    $total = 0;
+    foreach ($marks as $subject => $value) {
+        $total += $value;
+    }
+    return $total;
 }
 
 
