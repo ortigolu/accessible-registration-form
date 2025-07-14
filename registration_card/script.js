@@ -76,31 +76,31 @@ function validateFormFieldOnInput(input) {
             return validateField(
                 input,
                 validateNotEmpty,
-                "Full Name is required"
+                "El nombre completo es obligatorio"
             );
 
         case "username":
             return validateField(
                 input,
                 validateMinLength(5),
-                "Must be at least 5 characters"
+                "Debe tener al menos 5 caracteres"
             );
 
         case "email":
-            return validateField(input, validateEmail, "Invalid email format");
+            return validateField(input, validateEmail, "Formato de email inválido");
 
         case "phoneNumber":
             return validateField(
                 input,
                 validatePhone,
-                "Phone number must be 11 digits"
+                "El número de teléfono debe tener 10 dígitos"
             );
 
         case "password":
             return validateField(
                 input,
                 validateMinLength(6),
-                "Must be at least 6 characters"
+                "Debe tener al menos 6 caracteres"
             );
 
         case "confirmPassword":
@@ -111,7 +111,7 @@ function validateFormFieldOnInput(input) {
             return validateField(
                 input,
                 validatePasswordMatch(password),
-                "Passwords do not match"
+                "Las contraseñas no coinciden"
             );
     }
 }
@@ -158,7 +158,7 @@ function validateEmail(value) {
 }
 
 function validatePhone(value) {
-    return /^\d{11}$/.test(value);
+    return /^\d{10}$/.test(value);
 }
 
 function validatePasswordMatch(password) {
@@ -186,7 +186,7 @@ function isValidGender(gender = null) {
         genders.forEach((gender) => gender.classList.remove("invalid"));
         return true;
     } else {
-        showError(genderOptions, "Please select a gender");
+        showError(genderOptions, "Por favor seleccione un género");
         genders.forEach((gender) => gender.classList.add("invalid"));
         return false;
     }
